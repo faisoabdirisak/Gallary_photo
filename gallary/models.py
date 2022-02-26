@@ -9,6 +9,9 @@ class Category(models.Model):
         return self.name
 
 
+    def save_category(self):
+        self.save()
+
 
 class Location(models.Model):
     name= models.CharField(max_length=100, null=False, blank=False)
