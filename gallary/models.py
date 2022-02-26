@@ -8,6 +8,10 @@ class Category(models.Model):
     def __str__(self):
         return self.name
 
+    @classmethod
+    def search_by_name(cls,search_term):
+        gallary = cls.objects.filter(name__icontains=search_term)
+        return gallary
 
     def save_category(self):
         self.save()
