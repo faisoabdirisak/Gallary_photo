@@ -11,4 +11,5 @@ def gallary(request):
     return render(request,'gallary.html',context)
 
 def viewPhoto(request,pk):
-    return render(request,'photo.html')    
+    photo=Photo.objects.get(id=pk)
+    return render(request,'photo.html',{'photo':photo})    

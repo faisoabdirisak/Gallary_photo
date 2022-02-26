@@ -60,8 +60,8 @@
                                 <img src="{{photo.image.url}}"
                                  class="card-img-top" class="image-thumbnail" alt="image">
                                 <div class="card-body mt-2">
-                                  <small>Category:{{photo.category.name}}</small><br>
-                                  <small>Location:{{photo.location.name}}</small>
+                                  <small><strong>Category:{{photo.category.name}}</strong></small><br>
+                                  <small><strong>Location:{{photo.location.name}}</strong></small>
                                 </div>
                                
                                 <a href="{% url 'photo' photo.id %}" class="btn btn-outline-dark">View</a>

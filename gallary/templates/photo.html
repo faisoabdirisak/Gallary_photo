@@ -12,6 +12,17 @@ integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jI
 
 </head>
 <body>
-   
+    <div class="container">
+        <div class="row justify-cotent-center">
+            <div class="col-md-9">
+                <a href="{% url 'gallary' %}" class="btn btn-dark my-3">Go Back</a>
+                <div style="height: 100vh;">
+                <img style="height:60%;" src="{{photo.image.url}}">
+                <p><strong>{{ photo.description}}</strong></p>
+            </div>
+                
+            </div>
+        </div>
+    </div>
 </body>
 </html>
