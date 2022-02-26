@@ -15,14 +15,18 @@
             <div class="collapse navbar-collapse" id="navbarColor02">
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active"> <a class="nav-link" href="#" data-abc="true">Home <span class="sr-only">(current)</span></a> </li>
-                    { {%for category in categories%}
-                    <li class="list-group-item">
-                       <a href="{% url 'gallary' %}?category={{category.name}}"> {{category.name}}</a>
-                    </li>
-                    {% endfor %}
                         </ul>     
                 </ul>
-                <form onsubmit="event.preventDefault()" class="form-inline my-2 my-lg-0"> <input class="form-control mr-sm-2" type="text" placeholder="Search"> <button class="btn btn-secondary my-2 my-sm-0" type="submit">Search</button> </form>
+                <form class="navbar-form" role="search" action="{% url 'search_results' %}">
+
+                    <div class="input-group">
+                      <input type="text" class="form-control" placeholder="Search category" name="category">
+                      <div class="input-group-btn">
+                        <button class="btn btn-default ml-2" type="submit">Search</button>
+                      </div>
+                    </div>
+          
+                  </form>
             </div>
         </nav>
 
@@ -53,16 +57,15 @@
                 <div class="col-md-9">
                     <div class="row">
                         {% for photo in photos %}
-                        <div class="col-md-4">
-                            <div class="card my-5" style="height:200px;" >
-                                <img src="{{photo.image.url}}"
-                                 class="card-img-top" class="image-thumbnail" alt="image">
-                                <div class="card-body mt-2">
-                                  <small><strong>Category:{{photo.category.name}}</strong></small><br>
-                                  <small><strong>Location:{{photo.location.name}}</strong></small>
+                        <div class="col-md-4 m-2">
+                            <div class="card" >
+                                <img class="card-img-top" src="{{photo.image.url}}" alt="Card image cap">
+                                <div class="card-body">
+                                  <h5 class="card-title">  
+                                    <small><strong>Category:{{photo.category.name}}</strong></small><br>
+                                    <small><strong>Location:{{photo.location.name}}</strong></small></h5>
+                                    <a href="{% url 'photo' photo.id %}" class="btn btn-outline-dark align-center">View</a>
                                 </div>
-                               
-                                <a href="{% url 'photo' photo.id %}" class="btn btn-outline-dark">View</a>
                               </div>
                         </div>
                         {% empty %}

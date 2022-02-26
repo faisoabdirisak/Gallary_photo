@@ -28,7 +28,7 @@ class LocationTestClass(TestCase):
 
     # Testing  instance
     def test_instance(self):
-        self.assertTrue(isinstance(self.uk,Location))
+        self.assertTrue(isinstance(self.uk, Location))
 
       # Testing Save Method
     def test_save_method(self):

@@ -5,8 +5,8 @@ from django.db import models
 class Category(models.Model):
     name= models.CharField(max_length=100, null=False, blank=False)
 
-    def __str__(self):
-        return self.name
+    # def __str__(self):
+    #     return self.name
 
     @classmethod
     def search_by_name(cls,search_term):
