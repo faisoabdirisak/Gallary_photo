@@ -10,9 +10,9 @@ def gallary(request):
         photos=Photo.objects.all()
     else:
          photos = Photo.objects.filter(location__name = location)
-    categories=Category.objects.all()
+
     locations=Location.objects.all()
-    
+    categories=Category.objects.all()
     context={'locations':locations, 'categories':categories, 'photos':photos}
     return render(request,'gallary.html',context)
 
