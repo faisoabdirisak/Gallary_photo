@@ -6,7 +6,8 @@ from . models import Category, Photo, Location
 def gallary(request):
     categories=Category.objects.all()
     locations=Location.objects.all()
-    context={'locations':locations, 'categories':categories}
+    photos=Photo.objects.all()
+    context={'locations':locations, 'categories':categories, 'photos':photos}
     return render(request,'gallary.html',context)
 
 def viewPhoto(request,pk):
