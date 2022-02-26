@@ -20,11 +20,15 @@ class Location(models.Model):
         return self.name
 
 
+    def save_location(self):
+        self.save()
+
+
 class Photo (models.Model):
-    location = models.ForeignKey(Location, on_delete=models.SET_NULL,null=True, blank=True)
-    category = models.ForeignKey(Category, on_delete=models.SET_NULL,null=True, blank=True)
     image=models.ImageField(null=False,blank=False,)
     description= models.TextField(max_length=500, null=False, blank=False)
+    location = models.ForeignKey(Location, on_delete=models.SET_NULL,null=True, blank=True)
+    category = models.ForeignKey(Category, on_delete=models.SET_NULL,null=True, blank=True)
 
     def __str__(self):
         return self.description        
