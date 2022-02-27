@@ -124,6 +124,8 @@ MEDIA_URL = '/images/'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
+DISABLE_COLLECTSTATIC=1
+
 STATICFILES_DIRS = [
     BASE_DIR / 'static'
 ]
