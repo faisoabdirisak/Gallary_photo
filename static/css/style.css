@@ -12,6 +12,15 @@ padding:0;
 background-color:rgba(0, 0, 0, 0.534);
 height: 100%;
 }
-a{
-    text-decoration:none;
-    }
+
+ul li a{
+color: white;
+
+}
+
+.list-group-item{
+    background-color: #41A846;
+    border: none;
+}
+
+

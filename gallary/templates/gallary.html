@@ -13,8 +13,9 @@
                                 <div class="card-body">
                                   <h5 class="card-title">  
                                     <small><strong>Category:{{photo.category.name}}</strong></small><br>
-                                    <small><strong>Location:{{photo.location.name}}</strong></small></h5>
-                                    <a href="{% url 'photo' photo.id %}" class="btn btn-outline-dark align-center">View</a>
+                                    <a href="{% url 'photo' photo.id %}" class="btn btn-success align-center">View</a>
+                                    <input class="form-control m-2" type="text"
+                                    value="{{photo.image.url}}" id="{{photo.id}}.url">
                                     <button class="btn btn-success btn-sm" onclick="copyLink('{{photo.id}}.url')">Copy link</button>
                                 </div>
                               </div>
