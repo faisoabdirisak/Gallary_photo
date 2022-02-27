@@ -8,10 +8,7 @@ class Category(models.Model):
     # def __str__(self):
     #     return self.name
 
-    @classmethod
-    def search_by_name(cls,search_term):
-        gallary = cls.objects.filter(name__icontains=search_term)
-        return gallary
+   
 
     def save_category(self):
         self.save()
@@ -33,6 +30,12 @@ class Photo (models.Model):
     description= models.TextField(max_length=500, null=False, blank=False)
     location = models.ForeignKey(Location, on_delete=models.SET_NULL,null=True, blank=True)
     category = models.ForeignKey(Category, on_delete=models.SET_NULL,null=True, blank=True)
+
+
+    @classmethod
+    def search_by_category(cls,search_term):
+        photo = cls.objects.filter(name__icontains=search_term)
+        return photo
 
     def __str__(self):
         return self.description        
