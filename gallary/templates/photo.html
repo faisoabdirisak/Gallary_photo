@@ -5,9 +5,9 @@
         <div class="row justify-cotent-center">
             <div class="col-md-9">
                 <a href="{% url 'gallary' %}" class="btn btn-success my-3">Go Back</a>
-                <div style="height: 100vh;">
+                <div>
                 <img style="height:60%;" src="{{photo.image.url}}">
-                <p><strong>{{ photo.description}}</strong></p>
+                <p class="desc"><strong>{{ photo.description}}</strong></p>
             </div>
                 
             </div>

@@ -9,7 +9,7 @@ body{
 .over{
 margin:0;
 padding:0;
-background-color:rgba(0, 0, 0, 0.534);
+background-color:rgba(0, 0, 0, 0.623);
 height: 100%;
 }
 
@@ -17,10 +17,27 @@ ul li a{
 color: white;
 
 }
+ul li a:hover{
+    color: white;
+    text-decoration: none;
+    
+    }
 
 .list-group-item{
     background-color: #41A846;
     border: none;
+}
+
+.desc{
+    margin-top: 10px;
+    text-align: center;
+    height: 100px;
+    width: 400px;
+    z-index: 999;
+    opacity: 0.9;
+    color: azure;
+    background-color: #41A846;
+    border-radius: 10px;
 }
 
 
