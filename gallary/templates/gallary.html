@@ -4,12 +4,12 @@
 {% block content %}
 {% include "navbar.html" %}
         <div class="container">
-                <div class="col-md-12">
+                <div class="col">
                     <div class="row">
                         {% for photo in photos %}
-                        <div class="col-md-4 m-2">
+                        <div class="col-md-3 m-2">
                             <div class="card" >
-                                <img class="card-img-top" src="{{photo.image.url}}" alt="Card image cap">
+                                <img class="card-img-top" src="{{photo.image.url}}" alt="Card image cap" style="height: 200px;">
                                 <div class="card-body">
                                   <h5 class="card-title">  
                                     <small><strong>Category:{{photo.category.name}}</strong></small><br>
@@ -21,7 +21,7 @@
                               </div>
                         </div>
                         {% empty %}
-                        <h3>No photos Uploaded in Here........</h3>
+                        <h3 class="text-danger">No photos Uploaded in Here........</h3>
                         {% endfor %}
                         
             
