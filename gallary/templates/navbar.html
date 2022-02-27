@@ -1,7 +1,7 @@
 <nav class="navbar navbar-expand-lg navbar-dark bg-success"> <a class="navbar-brand" href="{% url 'gallary' %}" data-abc="true">GALLARY ALBUM</a> <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation"> <span class="navbar-toggler-icon"></span> </button>
     <div class="collapse navbar-collapse" id="navbarColor02">
         <ul class="navbar-nav mr-auto">
-            {%for location in locations %}
+            {% for location in locations %}
                     <li class="list-group-item">
                        <a href="{% url 'gallary' %}?location={{location.name}}"> {{location.name}}</a>
                     </li>
