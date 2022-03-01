@@ -12,10 +12,10 @@ https://docs.djangoproject.com/en/4.0/ref/settings/
 """
 
 from pathlib import Path
-import os
 import django_heroku
 import dj_database_url
 from decouple import config,Csv
+import os
 
 MODE=config("MODE", default="dev")
 SECRET_KEY = config('SECRET_KEY')
